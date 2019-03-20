@@ -2,9 +2,6 @@
 Imports System.IO
 
 Public Class frmMain
-    Private Sub FIleToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FIleToolStripMenuItem.Click
-
-    End Sub
 
     Private Sub OpenCtrlOToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenCtrlOToolStripMenuItem.Click
         Try
@@ -15,13 +12,12 @@ Public Class frmMain
 
             Dim strFullPath As String = OpenFileDialog1.FileName
             Dim fileRead As New FileStream(strFullPath, FileMode.Open, FileAccess.Read)
-            Dim reader As New StreamReader(strFullPath)
+            Dim reader As New StreamReader(fileRead)
             txtMain.Text = reader.ReadToEnd()
             reader.Close()
 
         Catch ex As Exception
             MessageBox.Show("Error")
-
         End Try
 
     End Sub
@@ -29,4 +25,23 @@ Public Class frmMain
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
         Application.Exit()
     End Sub
+
+    Private Sub SaveCtrlSToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveCtrlSToolStripMenuItem.Click
+        Save()
+    End Sub
+
+    Public Sub Save()
+        Try
+            SaveFileDialog1.Filter = "Text Files|*.txt"
+
+            Dim strFullPath As String = SaveFileDialog1.FileName
+            Dim fileWrite As New FileStream(strFullPath, FileMode.Create, FileAccess.Write)
+            Dim writer As New StreamWriter(fileWrite)
+            writer.Close()
+
+        Catch ex As Exception
+            MessageBox.Show("Error")
+        End Try
+    End Sub
+
 End Class

@@ -27,19 +27,20 @@ Partial Class frmMain
         Me.txtMain = New System.Windows.Forms.TextBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FIleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewCtrlNToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenCtrlOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaveCtrlSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaveAsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CopyCtrlCToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CutCtrlXToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PasteCtrlVToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -69,20 +70,6 @@ Partial Class frmMain
         Me.FIleToolStripMenuItem.Name = "FIleToolStripMenuItem"
         Me.FIleToolStripMenuItem.Size = New System.Drawing.Size(44, 24)
         Me.FIleToolStripMenuItem.Text = "&File"
-        '
-        'EditToolStripMenuItem
-        '
-        Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyCtrlCToolStripMenuItem, Me.CutCtrlXToolStripMenuItem, Me.PasteCtrlVToolStripMenuItem})
-        Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
-        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(47, 24)
-        Me.EditToolStripMenuItem.Text = "&Edit"
-        '
-        'HelpToolStripMenuItem
-        '
-        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem})
-        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(53, 24)
-        Me.HelpToolStripMenuItem.Text = "&Help"
         '
         'NewCtrlNToolStripMenuItem
         '
@@ -126,32 +113,46 @@ Partial Class frmMain
         Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(225, 26)
         Me.ExitToolStripMenuItem.Text = "E&xit"
         '
+        'EditToolStripMenuItem
+        '
+        Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyCtrlCToolStripMenuItem, Me.CutCtrlXToolStripMenuItem, Me.PasteCtrlVToolStripMenuItem})
+        Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
+        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(47, 24)
+        Me.EditToolStripMenuItem.Text = "&Edit"
+        '
         'CopyCtrlCToolStripMenuItem
         '
         Me.CopyCtrlCToolStripMenuItem.Name = "CopyCtrlCToolStripMenuItem"
         Me.CopyCtrlCToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
-        Me.CopyCtrlCToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
+        Me.CopyCtrlCToolStripMenuItem.Size = New System.Drawing.Size(169, 26)
         Me.CopyCtrlCToolStripMenuItem.Text = "&Copy"
         '
         'CutCtrlXToolStripMenuItem
         '
         Me.CutCtrlXToolStripMenuItem.Name = "CutCtrlXToolStripMenuItem"
         Me.CutCtrlXToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
-        Me.CutCtrlXToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
+        Me.CutCtrlXToolStripMenuItem.Size = New System.Drawing.Size(169, 26)
         Me.CutCtrlXToolStripMenuItem.Text = "Cu&t"
         '
         'PasteCtrlVToolStripMenuItem
         '
         Me.PasteCtrlVToolStripMenuItem.Name = "PasteCtrlVToolStripMenuItem"
         Me.PasteCtrlVToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.V), System.Windows.Forms.Keys)
-        Me.PasteCtrlVToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
+        Me.PasteCtrlVToolStripMenuItem.Size = New System.Drawing.Size(169, 26)
         Me.PasteCtrlVToolStripMenuItem.Text = "&Paste"
+        '
+        'HelpToolStripMenuItem
+        '
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem})
+        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(53, 24)
+        Me.HelpToolStripMenuItem.Text = "&Help"
         '
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
         Me.AboutToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.A), System.Windows.Forms.Keys)
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(177, 26)
         Me.AboutToolStripMenuItem.Text = "About"
         '
         'OpenFileDialog1
@@ -193,4 +194,5 @@ Partial Class frmMain
     Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents SaveFileDialog1 As SaveFileDialog
 End Class
