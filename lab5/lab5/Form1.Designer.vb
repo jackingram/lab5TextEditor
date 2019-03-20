@@ -39,6 +39,7 @@ Partial Class frmMain
         Me.CutCtrlXToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PasteCtrlVToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -60,7 +61,7 @@ Partial Class frmMain
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(647, 28)
         Me.MenuStrip1.TabIndex = 1
-        Me.MenuStrip1.Text = "MenuStrip1"
+        Me.MenuStrip1.Text = "menuStrip1"
         '
         'FIleToolStripMenuItem
         '
@@ -110,7 +111,7 @@ Partial Class frmMain
         Me.SaveAsToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
             Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
         Me.SaveAsToolStripMenuItem.Size = New System.Drawing.Size(225, 26)
-        Me.SaveAsToolStripMenuItem.Text = "Sa&ve As"
+        Me.SaveAsToolStripMenuItem.Text = "S&ave As"
         '
         'CloseToolStripMenuItem
         '
@@ -137,7 +138,7 @@ Partial Class frmMain
         Me.CutCtrlXToolStripMenuItem.Name = "CutCtrlXToolStripMenuItem"
         Me.CutCtrlXToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
         Me.CutCtrlXToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
-        Me.CutCtrlXToolStripMenuItem.Text = "C&ut"
+        Me.CutCtrlXToolStripMenuItem.Text = "Cu&t"
         '
         'PasteCtrlVToolStripMenuItem
         '
@@ -151,7 +152,11 @@ Partial Class frmMain
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
         Me.AboutToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.A), System.Windows.Forms.Keys)
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
-        Me.AboutToolStripMenuItem.Text = "&About"
+        Me.AboutToolStripMenuItem.Text = "About"
+        '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
         'frmMain
         '
@@ -187,4 +192,5 @@ Partial Class frmMain
     Friend WithEvents PasteCtrlVToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
 End Class
