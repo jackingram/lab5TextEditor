@@ -27,24 +27,24 @@ Public Class frmMain
     End Sub
 
     Private Sub SaveCtrlSToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveCtrlSToolStripMenuItem.Click
-        '  SaveFileDialog1.Filter = "Text Files|*.txt"
-        '  Dim strFullPath As String = SaveFileDialog1.FileName
-        ' Dim fileWrite As New FileStream(strFullPath, FileMode.Create, FileAccess.Write)
-        ' My.Computer.FileSystem.WriteAllText(SaveFileDialog1.FileName, "" & txtMain.Text, True)
-
-
         Save()
     End Sub
 
     Public Sub Save()
         Try
-            SaveFileDialog1.Filter = "Text Files|*.txt"
-
             Dim strFullPath As String = SaveFileDialog1.FileName
-            Dim fileWrite As New FileStream(strFullPath, FileMode.Create, FileAccess.Write)
-            Dim writer As New StreamWriter(fileWrite)
-            writer.Close()
-            System.IO.File.WriteAllText(SaveFileDialog1.FileName, txtMain.Text)
+
+            If File.Exists(strFullPath) Then
+                Dim fileWrite As New FileStream(strFullPath, FileMode.Create, FileAccess.Write)
+                Dim writer As New IO.StreamWriter(fileWrite)
+                writer.WriteLine(txtMain.Text)
+                writer.Close()
+            Else
+                SaveFileDialog1.Filter = "Text Files|*.txt"
+                SaveFileDialog1.ShowDialog()
+                System.IO.File.WriteAllText(SaveFileDialog1.FileName, txtMain.Text)
+            End If
+
 
         Catch ex As Exception
             MessageBox.Show("Error")
@@ -54,7 +54,35 @@ Public Class frmMain
     Private Sub SaveAsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveAsToolStripMenuItem.Click
         SaveFileDialog1.Filter = "Text Files|*.txt"
         If SaveFileDialog1.ShowDialog() = DialogResult.OK Then
-            System.IO.File.WriteAllText(SaveFileDialog1.FileName, txtMain.Text)
+            Save()
         End If
+    End Sub
+
+    Private Sub NewCtrlNToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewCtrlNToolStripMenuItem.Click
+        txtMain.Text = ""
+        SaveFileDialog1.FileName = ""
+
+
+    End Sub
+
+    Private Sub CutCtrlXToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CutCtrlXToolStripMenuItem.Click
+        If (txtMain.SelectedText = "") Then
+            MessageBox.Show("Please Select Some Text to CUT!")
+        Else
+            My.Computer.Clipboard.SetText(txtMain.SelectedText)
+            txtMain.SelectedText = ""
+        End If
+    End Sub
+
+    Private Sub CopyCtrlCToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CopyCtrlCToolStripMenuItem.Click
+        If (txtMain.SelectedText = "") Then
+            MessageBox.Show("Please Select Some Text to COPY!")
+        Else
+            My.Computer.Clipboard.SetText(txtMain.SelectedText)
+        End If
+    End Sub
+
+    Private Sub PasteCtrlVToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PasteCtrlVToolStripMenuItem.Click
+        txtMain.Text += My.Computer.Clipboard.GetText()
     End Sub
 End Class
