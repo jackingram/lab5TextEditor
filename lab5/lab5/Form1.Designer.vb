@@ -41,6 +41,8 @@ Partial Class frmMain
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ToolTip2 = New System.Windows.Forms.ToolTip(Me.components)
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -124,21 +126,21 @@ Partial Class frmMain
         '
         Me.CopyCtrlCToolStripMenuItem.Name = "CopyCtrlCToolStripMenuItem"
         Me.CopyCtrlCToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
-        Me.CopyCtrlCToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
+        Me.CopyCtrlCToolStripMenuItem.Size = New System.Drawing.Size(169, 26)
         Me.CopyCtrlCToolStripMenuItem.Text = "&Copy"
         '
         'CutCtrlXToolStripMenuItem
         '
         Me.CutCtrlXToolStripMenuItem.Name = "CutCtrlXToolStripMenuItem"
         Me.CutCtrlXToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
-        Me.CutCtrlXToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
+        Me.CutCtrlXToolStripMenuItem.Size = New System.Drawing.Size(169, 26)
         Me.CutCtrlXToolStripMenuItem.Text = "Cu&t"
         '
         'PasteCtrlVToolStripMenuItem
         '
         Me.PasteCtrlVToolStripMenuItem.Name = "PasteCtrlVToolStripMenuItem"
         Me.PasteCtrlVToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.V), System.Windows.Forms.Keys)
-        Me.PasteCtrlVToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
+        Me.PasteCtrlVToolStripMenuItem.Size = New System.Drawing.Size(169, 26)
         Me.PasteCtrlVToolStripMenuItem.Text = "&Paste"
         '
         'HelpToolStripMenuItem
@@ -195,4 +197,6 @@ Partial Class frmMain
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents SaveFileDialog1 As SaveFileDialog
+    Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents ToolTip2 As ToolTip
 End Class
