@@ -157,7 +157,7 @@ Partial Class frmMain
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
         Me.AboutToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.A), System.Windows.Forms.Keys)
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(177, 26)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
         Me.AboutToolStripMenuItem.Text = "About"
         '
         'OpenFileDialog1

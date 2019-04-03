@@ -85,4 +85,8 @@ Public Class frmMain
     Private Sub PasteCtrlVToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PasteCtrlVToolStripMenuItem.Click
         txtMain.Text += My.Computer.Clipboard.GetText()
     End Sub
+
+    Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
+        MessageBox.Show("NETD 2202 - JACK INGRAM ")
+    End Sub
 End Class
