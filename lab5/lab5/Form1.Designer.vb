@@ -43,6 +43,7 @@ Partial Class frmMain
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.ToolTip2 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ToolTip3 = New System.Windows.Forms.ToolTip(Me.components)
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -55,6 +56,7 @@ Partial Class frmMain
         Me.txtMain.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.txtMain.Size = New System.Drawing.Size(647, 447)
         Me.txtMain.TabIndex = 0
+        Me.toolTip.SetToolTip(Me.txtMain, "Text documents displayed here")
         '
         'MenuStrip1
         '
@@ -65,6 +67,7 @@ Partial Class frmMain
         Me.MenuStrip1.Size = New System.Drawing.Size(647, 28)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "menuStrip1"
+        Me.toolTip.SetToolTip(Me.MenuStrip1, "Use the options here to open files, create new ones and save files (.txt) only")
         '
         'FIleToolStripMenuItem
         '
@@ -199,4 +202,5 @@ Partial Class frmMain
     Friend WithEvents SaveFileDialog1 As SaveFileDialog
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents ToolTip2 As ToolTip
+    Friend WithEvents ToolTip3 As ToolTip
 End Class
